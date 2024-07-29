@@ -5,3 +5,13 @@
 */ 
 
 // Use some simple gui framework or just use the terminal
+
+#include <iostream>
+
+void hello(); 
+
+int main () {
+    std::cout << "Hello Khulan";
+        
+    return 0;
+}
