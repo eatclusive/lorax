@@ -14,4 +14,4 @@ int main () {
     std::cout << "Hello Khulan";
         
     return 0;
-}
+}   
