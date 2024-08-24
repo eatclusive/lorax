@@ -24,6 +24,11 @@ $(TARGET): $(OBJS)
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
+# Rule to create the object directory if it doesn't exist
+$(OBJDIR):
+	mkdir -p $(OBJDIR)
+
 # Clean up build files
 clean:
 	rm -f $(OBJS) $(TARGET)
+	rm -rf $(OBJDIR)
