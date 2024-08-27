@@ -15,8 +15,14 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
+from myappmotor.views import motor_plot_view, button_page  # Import the view function
 
 urlpatterns = [
+    # path('admin/', admin.site.urls),
+    # path('', button_page, name='home'),  # Root URL maps to button_page view
+    # path('motor-plot/', motor_plot_view, name='motor_plot'),
+    # path('motor-plot/', include('myappmotor.urls')),  # Ensure this is includedß
     path('admin/', admin.site.urls),
+    path('', include('myappmotor.urls')),  # This should include the URLs from your app
 ]
