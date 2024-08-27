@@ -19,7 +19,10 @@ from django.urls import include, path
 from myappmotor.views import motor_plot_view, button_page  # Import the view function
 
 urlpatterns = [
+    # path('admin/', admin.site.urls),
+    # path('', button_page, name='home'),  # Root URL maps to button_page view
+    # path('motor-plot/', motor_plot_view, name='motor_plot'),
+    # path('motor-plot/', include('myappmotor.urls')),  # Ensure this is includedß
     path('admin/', admin.site.urls),
-    path('', button_page, name='home'),  # Root URL maps to button_page view
-    path('motor-plot/', motor_plot_view, name='motor_plot'),
+    path('', include('myappmotor.urls')),  # This should include the URLs from your app
 ]
