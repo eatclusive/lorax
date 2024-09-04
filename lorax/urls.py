@@ -25,4 +25,5 @@ urlpatterns = [
     # path('motor-plot/', include('myappmotor.urls')),  # Ensure this is includedß
     path('admin/', admin.site.urls),
     path('', include('myappmotor.urls')),  # This should include the URLs from your app
+    path('api/', include('orderqueue.urls')),
 ]
