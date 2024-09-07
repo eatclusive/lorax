@@ -9,3 +9,7 @@
 2024-08-28 20:06:19.625 EDT [43843] FATAL:  role "faizand" does not exist
 2024-08-28 20:09:03.851 EDT [43870] ERROR:  role "faizand" already exists
 2024-08-28 20:09:03.851 EDT [43870] STATEMENT:  CREATE ROLE faizand WITH PASSWORD '123abc';
+2024-09-04 00:06:00.763 EDT [43432] LOG:  received smart shutdown request
+2024-09-04 00:06:00.767 EDT [43432] LOG:  background worker "logical replication launcher" (PID 43439) exited with exit code 1
+2024-09-04 00:06:00.767 EDT [43434] LOG:  shutting down
+2024-09-04 00:06:00.789 EDT [43432] LOG:  database system is shut down
