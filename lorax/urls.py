@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from myappmotor.views import motor_plot_view, button_page  # Import the view function
+from .views import home_view  # Import the home view
+# from myappmotor.views import motor_plot_view, button_page  # Import the view function
+
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
@@ -24,6 +26,7 @@ urlpatterns = [
     # path('motor-plot/', motor_plot_view, name='motor_plot'),
     # path('motor-plot/', include('myappmotor.urls')),  # Ensure this is includedß
     path('admin/', admin.site.urls),
-    path('', include('myappmotor.urls')),  # This should include the URLs from your app
+    #path('', include('myappmotor.urls')),  # This should include the URLs from your app
+    path('', home_view, name='home'),  # Root URL for the home page
     path('api/', include('orderqueue.urls')),
 ]
