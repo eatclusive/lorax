@@ -34,7 +34,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'myappmotor'
+    # 'myappmotor',
+    'orderqueue',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -52,7 +54,7 @@ ROOT_URLCONF = 'lorax.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'lorax'/ 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -65,6 +67,7 @@ TEMPLATES = [
     },
 ]
 
+
 WSGI_APPLICATION = 'lorax.wsgi.application'
 
 
@@ -76,10 +79,19 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'customers_info',
-        'USER': 'faizand',
+        'USER': 'faizandarsot',
         'PASSWORD': '123abc',
         'HOST': 'localhost',  # Set to your database server address
         'PORT': '5432',       # Default PostgreSQL port
+    }, 
+    'khulan_db': {
+        'ENGINE': 'django.db.backends.postgresql', 
+        'NAME': 'customers_info',
+        'USER': 'khulanjanchiv',
+        'PASSWORD': '123abc', # might be different
+        'HOST': 'localhost',  # Set to your database server address
+        'PORT': '5432',       # Default PostgreSQL port
+
     }
 }
 

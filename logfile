@@ -1,0 +1,15 @@
+2024-08-28 20:00:45.622 EDT [43432] LOG:  starting PostgreSQL 14.13 (Homebrew) on aarch64-apple-darwin22.6.0, compiled by Apple clang version 15.0.0 (clang-1500.1.0.2.5), 64-bit
+2024-08-28 20:00:45.623 EDT [43432] LOG:  listening on IPv6 address "::1", port 5432
+2024-08-28 20:00:45.623 EDT [43432] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-08-28 20:00:45.623 EDT [43432] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2024-08-28 20:00:45.625 EDT [43433] LOG:  database system was shut down at 2024-08-28 19:59:44 EDT
+2024-08-28 20:00:45.628 EDT [43432] LOG:  database system is ready to accept connections
+2024-08-28 20:05:12.224 EDT [43755] ERROR:  syntax error at or near "123" at character 35
+2024-08-28 20:05:12.224 EDT [43755] STATEMENT:  CREATE USER faizand WITH PASSWORD 123abc;
+2024-08-28 20:06:19.625 EDT [43843] FATAL:  role "faizand" does not exist
+2024-08-28 20:09:03.851 EDT [43870] ERROR:  role "faizand" already exists
+2024-08-28 20:09:03.851 EDT [43870] STATEMENT:  CREATE ROLE faizand WITH PASSWORD '123abc';
+2024-09-04 00:06:00.763 EDT [43432] LOG:  received smart shutdown request
+2024-09-04 00:06:00.767 EDT [43432] LOG:  background worker "logical replication launcher" (PID 43439) exited with exit code 1
+2024-09-04 00:06:00.767 EDT [43434] LOG:  shutting down
+2024-09-04 00:06:00.789 EDT [43432] LOG:  database system is shut down
