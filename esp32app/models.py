@@ -22,7 +22,7 @@ class Command(models.Model):
 
     def __str__(self):
         return f"Command to {self.device.name} - {self.command_type}"
-    
+
 class SensorData(models.Model):
     """
     Represents data received from the ESP32

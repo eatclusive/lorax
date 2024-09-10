@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'orderqueue',
-    'rest_framework'
+    'rest_framework',
     'esp32app'
     # 'myappmotor',
 ]
