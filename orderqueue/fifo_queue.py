@@ -2,7 +2,7 @@
 # It contains helpful functions for managing the queue
 
 from collections import deque
-from .models import Customer
+from .customer import Customer
 
 class OrderQueueManager:
     def __init__(self, max_orders=10):

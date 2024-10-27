@@ -1,9 +1,9 @@
 # Mapping the views in orderqueue/views.py to the URLs
 
 from django.urls import path
-from .views import AddOrderView, GetNextOrderView
+from .views import AddAndProcessOrderView, GetAllMachinesView
 
 urlpatterns = [
-    path('add-order/', AddOrderView.as_view(), name='add-order'),
-    path('get-next-order/', GetNextOrderView.as_view(), name='get-next-order'),
+    path('add-and-process-order/', AddAndProcessOrderView.as_view(), name='add-and-process-order'),
+    path('get-all-machines/', GetAllMachinesView.as_view(), name='get-all-machines'),
 ]
