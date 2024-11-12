@@ -26,7 +26,7 @@ class PAMFMachineManager:
         assigned_machine.current_order = order
         
         # Deduct resources
-        assigned_machine.seeds -= order['microgreen_amount']
+        assigned_machine.seeds -= order.microgreen_amount
         assigned_machine.water -= 10  # Assuming a set amount of water needed per order
 
         print(f"Assigned machine {assigned_machine.machine_id} to order with resources deducted.")

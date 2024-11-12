@@ -25,8 +25,8 @@ class PrepStageManager:
             # Set the current order
             self.current_order = next_order
             self.current_machine = assigned_machine
-            print(f"Order assigned to machine: {assigned_machine}")
-            return {"success": "Order assigned to machine.", "machine": assigned_machine}
+            print(f"Order assigned to machine: {assigned_machine.machine_id}")
+            return {"success": "Order assigned to machine.", "machine": assigned_machine.machine_id}
         except IndexError:
             return {"error": "The FIFO queue is empty."}
     
@@ -38,6 +38,14 @@ class PrepStageManager:
     
     def get_current_machine(self):
         return self.current_machine
+    
+    def update_machine_state(self, machine_id, new_state):
+        """Update the state of a specific machine through the machine manager."""
+        result = self.machine_manager.set_machine_state(machine_id, new_state)
+        if "success" in result:
+            print(result["success"])
+        else:
+            print(result["error"])
     
     def reset_machines(self):
         """Reset all machines to IDLE state and clear current order assignments."""
